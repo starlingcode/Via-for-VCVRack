@@ -49,8 +49,8 @@ struct Sync3XLLevels : Module {
     }
 
     ~Sync3XLLevels() {
-        free(leftExpander.producerMessage);
-        free(leftExpander.consumerMessage);
+        delete leftExpander.producerMessage;
+        delete leftExpander.consumerMessage;
     }   
 
     bool expanderAttached = false;

@@ -621,8 +621,8 @@ struct Sync3XL : Via<SYNC3_OVERSAMPLE_AMOUNT, SYNC3_OVERSAMPLE_AMOUNT> {
     }
 
     ~Sync3XL() {
-        free(rightExpander.producerMessage);
-        free(rightExpander.consumerMessage);
+        delete rightExpander.producerMessage;
+        delete rightExpander.consumerMessage;
     }   
 };
 
